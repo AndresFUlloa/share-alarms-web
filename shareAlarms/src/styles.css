@@ -1,1 +1,27 @@
-/* You can add global styles to this file, and also import other style files */
+.green-background {
+    background-color: #189B8D;
+}
+
+.black-background {
+    background-color: black;
+}
+
+.white-letter {
+    color: white;
+}
+
+table tr td:nth-child(1){
+    text-align: right;
+}
+
+table.green-background tr{
+    border-collapse: collapse;
+    border-bottom: 1px solid white
+}
+
+table.green-background tr td:nth-child(3){
+    background-color: black;
+}
+
+
+
