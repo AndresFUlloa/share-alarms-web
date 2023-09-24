@@ -1,6 +1,37 @@
-.green-background {
+h2, h3 {
+    margin-top: 1em;
+}
+
+.pacifico-letter {
+    font-family: 'Pacifico', sans-serif;
+}
+
+div, body, html{
+    height: 100%;
+}
+
+.green-darker-background {
     background-color: #189B8D;
 }
+
+.green-darker-letter {
+    color: #189B8D;
+}
+
+.green-dark-background {
+    background-color: #1FC7B5;
+}
+
+.margin-middle {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.text-middle {
+    text-align: center;
+}
+
+
 
 .black-background {
     background-color: black;
@@ -23,5 +54,20 @@ table.green-background tr td:nth-child(3){
     background-color: black;
 }
 
+.middle-square {
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
 
+.middle-square div.row {
+    margin-top: 1em;
+}
+
+.middle-square div.col-5 {
+    color: white;
+}
 

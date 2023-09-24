@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
 import { Event } from '../event';
 
 @Component({
@@ -11,6 +11,10 @@ export class EventCreateComponent implements OnInit {
 
   eventForm!: FormGroup;
   days!: number[];
+  events: Array<Event> = [
+    new Event(1, 'Evento 1', new Date(), false, []),
+    new Event(2, 'Evento 2', new Date(), false, [])
+  ];
 
   constructor(private formBuilder: FormBuilder) {}
 
@@ -31,6 +35,10 @@ export class EventCreateComponent implements OnInit {
 
   crearEvento(event: Event){
     event.dias = this.days;
+    event.recurrente = this.eventForm.controls['required'].value;
+    if(event.datetime === new Date()){
+      this.events.push(event);
+    }
   }
 
 }
