@@ -1,5 +1,31 @@
+:root {
+    --darkest-green: #0A433D;
+    --darker-green: #189B8D;
+    --dark-green: #1FC7B5;
+    --light-green: #2ADECB;
+    --lighter-green: #47E3D2;
+
+    --darker-grey: #000000;
+    --dark-grey: #1D1B20;
+    --light-grey: #322F35;
+    --lighter-grey: #48464C;
+    --lightest-grey: #AEA9B1;
+
+    --almost-white: #F5EFF7;
+    --white-color: #FFFFFF;
+
+    --yellow-color: #FFC107;
+}
+
+
 h2, h3 {
     margin-top: 1em;
+}
+
+i{
+    display: flex;
+    width: 1.5em;
+    height: 1.5em;
 }
 
 .pacifico-letter {
@@ -10,16 +36,29 @@ div, body, html{
     height: 100%;
 }
 
+footer{
+    height: 10%;
+    background-color: var(--darker-grey);
+}
+
+.app-container{
+    height: 90%;
+}
+
 .green-darker-background {
-    background-color: #189B8D;
+    background-color: var(--darker-green);
 }
 
 .green-darker-letter {
-    color: #189B8D;
+    color: var(--darker-green);
+}
+
+.green-dark-letter {
+    color: var(--dark-green);
 }
 
 .green-dark-background {
-    background-color: #1FC7B5;
+    background-color: var(--dark-green);
 }
 
 .margin-middle {
@@ -31,33 +70,32 @@ div, body, html{
     text-align: center;
 }
 
-
-
-.black-background {
-    background-color: black;
+.dark-grey-background {
+    background-color: var(--dark-grey);
 }
 
 .white-letter {
-    color: white;
+    color: var(--white-color);
 }
 
 table tr td:nth-child(1){
-    text-align: right;
+    text-align: center;
 }
 
-table.green-background tr{
+table.green-dark-background tr td:nth-child(1), table.green-dark-background tr td:nth-child(2){
     border-collapse: collapse;
-    border-bottom: 1px solid white
+    border-bottom: 1px solid var(--white-color)
 }
 
-table.green-background tr td:nth-child(3){
-    background-color: black;
+table.green-dark-background tr td:nth-child(3){
+    background-color: var(--dark-grey);
 }
 
 .middle-square {
     width: 75%;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 1em;
     height: auto;
     padding-top: 1em;
     padding-bottom: 1em;
@@ -68,6 +106,16 @@ table.green-background tr td:nth-child(3){
 }
 
 .middle-square div.col-5 {
+    color: var(--white-color);
+}
+
+.button-white {
+    background-color: white;
+    color: var(--darker-green);
+}
+
+.button-dark {
+    background-color: var(--dark-grey);
     color: white;
 }
 

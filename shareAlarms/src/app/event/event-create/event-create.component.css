@@ -1,0 +1,22 @@
+#div-days{
+    display: none;
+}
+
+.circle {
+    width: 2em;
+    height: 2em;
+    border-radius: 50%;
+    background-color: var(--dark-grey);
+    color: var(--light-green);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    font-weight: bold;
+  }
+  
+  
+  
+  
+  
+  

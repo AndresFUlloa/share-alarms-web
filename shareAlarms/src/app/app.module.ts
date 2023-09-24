@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { EventModule } from './event/event.module';
+import { NavigationModule } from './navigation/navigation.module';
 
 @NgModule({
   declarations: [
@@ -12,7 +13,8 @@ import { EventModule } from './event/event.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    EventModule
+    EventModule,
+    NavigationModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -41,4 +41,15 @@ export class EventCreateComponent implements OnInit {
     }
   }
 
+  cambiarRecurrente(){
+    var checkBoxElement = document.getElementById('recurrente') as HTMLInputElement;
+    var divDays = document.getElementById('div-days') as HTMLDivElement;
+    if(checkBoxElement.checked){
+      divDays.style.display = "flex";
+    }
+    else {
+      divDays.style.display = "none";
+    }
+  }
+
 }
