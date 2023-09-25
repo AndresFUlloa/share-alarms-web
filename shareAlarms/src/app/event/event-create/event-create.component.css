@@ -1,4 +1,4 @@
-#div-days{
+#div-days {
     display: none;
 }
 
@@ -6,17 +6,20 @@
     width: 2em;
     height: 2em;
     border-radius: 50%;
-    background-color: var(--dark-grey);
-    color: var(--light-green);
+    cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 5px;
     font-weight: bold;
-  }
-  
-  
-  
-  
-  
-  
+}
+
+.circle.selected {
+    background-color: var(--yellow-color);
+    color: var(--dark-grey);
+}
+
+.circle.unselected {
+    background-color: var(--dark-grey);
+    color: var(--light-green);
+}

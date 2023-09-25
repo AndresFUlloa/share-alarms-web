@@ -1,3 +1,5 @@
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+
 :root {
     --darkest-green: #0A433D;
     --darker-green: #189B8D;
@@ -89,6 +91,14 @@ table.green-dark-background tr td:nth-child(1), table.green-dark-background tr t
 
 table.green-dark-background tr td:nth-child(3){
     background-color: var(--dark-grey);
+}
+
+td div {
+    display: inline-flex;
+}
+
+td div i {
+    margin-left: 0.5em;
 }
 
 .middle-square {

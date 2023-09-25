@@ -19,10 +19,10 @@
                 <div class="col-3"><input type="text" formControlName="time" pattern="^[0-2][0-9]:[0-5][0-9]" placeholder="HH:MM"></div>
                 <div class="col-3" style="text-align: right; padding: 0;">
                   <input type="hidden" value="am">
-                  <button class="button-white" id="am-button">AM</button>
+                  <button class="button-white" id="am-button" type="button" (click)="selectHorario('am')">AM</button>
                 </div>
                 <div class="col-3" style="text-align: left; padding: 0;">
-                  <button class="button-dark" id="pm-button">PM</button>
+                  <button class="button-dark" id="pm-button" type="button" (click)="selectHorario('pm')">PM</button>
                 </div>
               </div>
               <div class="row">
@@ -43,25 +43,25 @@
               <div class="row" id="div-days">
                 <div class="col-3"></div>
                 <div class="col-1">
-                  <div class="circle">L</div>
+                  <div class="circle unselected" id="day1" (click)="modifyDays(1)">L</div>
                 </div>
                 <div class="col-1">
-                  <div class="circle">M</div>
+                  <div class="circle unselected" id="day2" (click)="modifyDays(2)">M</div>
                 </div>
                 <div class="col-1">
-                  <div class="circle">M</div>
+                  <div class="circle unselected" id="day3" (click)="modifyDays(3)">M</div>
                 </div>
                 <div class="col-1">
-                  <div class="circle">J</div>
+                  <div class="circle unselected" id="day4" (click)="modifyDays(4)">J</div>
                 </div>
                 <div class="col-1">
-                  <div class="circle">V</div>
+                  <div class="circle unselected" id="day5" (click)="modifyDays(5)">V</div>
                 </div>
                 <div class="col-1">
-                  <div class="circle">S</div>
+                  <div class="circle unselected" id="day6" (click)="modifyDays(6)">S</div>
                 </div>
                 <div class="col-1">
-                  <div class="circle">D</div>
+                  <div class="circle unselected" id="day7" (click)="modifyDays(7)">D</div>
                 </div>
                 <div class="col-2"></div>
               </div>
@@ -101,7 +101,10 @@
                   <td>1</td>
                   <td>{{event.description}}</td>
                   <td>
-                    <i class="icon-pencil green-dark-letter"></i>
+                    <div>
+                      <i class="bi bi-pencil green-dark-letter"></i>
+                      <i class="bi bi-trash green-dark-letter"></i>
+                    </div>
                   </td>
                 </tr>
               </tbody>
