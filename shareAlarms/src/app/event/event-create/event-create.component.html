@@ -1,3 +1,145 @@
-<p>
-  event-create works!
-</p>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-6 dark-grey-background">
+      <h2 class="green-darker-letter text-middle pacifico-letter">Share Alarms</h2>
+      <h3 class="white-letter">Crear nuevo evento</h3>
+      <div class="green-dark-background middle-square">
+        <form [formGroup]="eventForm" (ngSubmit)="!eventForm.invalid && crearEvento(eventForm.value)">
+            <input type="hidden" formControlName="id" value="">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-5">Descripcion:</div>
+                <div class="col-7">
+                  <input type="text" formControlName="description" placeholder="Ingrese el nombre del evento" id="description">
+                  <div class="error-alert" *ngIf="eventForm.get('description')!.hasError('required') && eventForm.get('description')!.touched">
+                    El campo es obligatorio
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-5">Fecha:</div>
+                <div class="col-7">
+                  <input type="text" formControlName="date" pattern="([0-2][0-9]|3[0-1])/(0[0-9]|1[0-2])/(19|20)[0-9]{2}" placeholder="dd/mm/yyyy">
+                  <div class="error-alert" *ngIf="eventForm.get('date')!.hasError('required') && eventForm.get('date')!.touched">
+                    El campo es obligatorio
+                  </div>
+                  <div class="error-alert" *ngIf="eventForm.get('date')!.hasError('pattern') && eventForm.get('date')!.touched">
+                    El campo no cumple el formato dd/mm/yyyy
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-3 white-letter">Horario:</div>
+                <div class="col-3">
+                  <input type="text" formControlName="time" pattern="^(0?[1-9]|1[0-2]):[0-5][0-9]" placeholder="HH:MM">
+                  <div class="error-alert" *ngIf="eventForm.get('time')!.hasError('required') && eventForm.get('time')!.touched">
+                    El campo es obligatorio
+                  </div>
+                  <div class="error-alert" *ngIf="eventForm.get('time')!.hasError('pattern') && eventForm.get('time')!.touched">
+                    El campo no cumple el formato HH:MM
+                  </div>
+                </div>
+                <div class="col-3" style="text-align: right; padding: 0;">
+                  <input type="hidden" formControlName="franja" value="am" id="franja">
+                  <button class="button-white" id="am-button" type="button" (click)="selectHorario('am')">AM</button>
+                </div>
+                <div class="col-3" style="text-align: left; padding: 0;">
+                  <button class="button-dark" id="pm-button" type="button" (click)="selectHorario('pm')">PM</button>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-5">Método activación:</div>
+                <div class="col-7">
+                  <select formControlName="metodo">
+                    <option value="">SELECCIONA TONO</option>
+                    <option value="Voz 1">Voz 1</option>
+                    <option value="Ring Bell Tone">Ring Bell Tone</option>
+                    <option value="AC DC Tone">AC/DC Tone</option>
+                  </select>
+                  <div class="error-alert" *ngIf="eventForm.get('metodo')!.hasError('required') && eventForm.get('metodo')!.touched">
+                    El campo es obligatorio
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-5">Recurrente</div>
+                <div class="col-7"><input type="checkbox" formControlName="recurrente" id="recurrente" (change)="cambiarRecurrente()"></div>
+              </div>
+              <div class="row" id="div-days">
+                <div class="col-3"></div>
+                <div class="col-1">
+                  <div class="circle unselected" id="day1" (click)="modifyDays(1)">L</div>
+                </div>
+                <div class="col-1">
+                  <div class="circle unselected" id="day2" (click)="modifyDays(2)">M</div>
+                </div>
+                <div class="col-1">
+                  <div class="circle unselected" id="day3" (click)="modifyDays(3)">M</div>
+                </div>
+                <div class="col-1">
+                  <div class="circle unselected" id="day4" (click)="modifyDays(4)">J</div>
+                </div>
+                <div class="col-1">
+                  <div class="circle unselected" id="day5" (click)="modifyDays(5)">V</div>
+                </div>
+                <div class="col-1">
+                  <div class="circle unselected" id="day6" (click)="modifyDays(6)">S</div>
+                </div>
+                <div class="col-1">
+                  <div class="circle unselected" id="day7" (click)="modifyDays(7)">D</div>
+                </div>
+                <div class="col-2"></div>
+              </div>
+              <div class="row">
+                <div class="col-6"></div>
+                <div class="col-3">
+                  <button class="button-white" type="button" (click)="clearForm()">Cancelar</button>
+                </div>
+                <div class="col-3">
+                  <button class="button-dark" type="submit">Crear</button>
+                </div>
+              </div>
+            </div>
+        </form>
+      </div>
+    </div>
+    <div class="col-6 green-darker-background">
+      <app-navigation></app-navigation>
+      <h3 class="white-letter">Listado de eventos</h3>
+      <div class="dark-grey-background middle-square">
+        <div class="row">
+          <div class="col-1"></div>
+          <div class="col-8">
+            <h3 class="white-letter">Eventos</h3>
+          </div>
+          <div class="col-3">
+            <h3 class="white-letter">{{fechaHoy | date: 'dd MMM'}}</h3>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-1"></div>
+          <div class="col-10" style="border-bottom: 1px solid white;"></div>
+        </div>
+        <div class="row">
+          <div class="col-1"></div>
+          <div class="col-10">
+            <table class="green-dark-background" style="width: 100%; border-bottom: none;">
+              <tbody>
+                <tr *ngFor="let event of events">
+                  <td>{{event.id}}</td>
+                  <td>{{event.description}}</td>
+                  <td>
+                    <div>
+                      <i class="bi bi-pencil green-dark-letter" (click)="editarEvento(event.id)"></i>
+                      <i class="bi bi-trash green-dark-letter" (click)="eliminarEvento(event.id)"></i>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
