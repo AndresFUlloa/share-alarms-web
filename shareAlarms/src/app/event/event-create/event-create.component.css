@@ -23,3 +23,7 @@
     background-color: var(--dark-grey);
     color: var(--light-green);
 }
+
+.error-alert {
+    font-size: 0.75em;
+}

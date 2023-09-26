@@ -90,7 +90,11 @@ table.green-dark-background tr td:nth-child(1), table.green-dark-background tr t
 }
 
 table.green-dark-background tr td:nth-child(3){
-    background-color: var(--dark-grey);
+    background-color: var(--dark-grey);    
+}
+
+table.green-dark-background tr:last-child{
+    border-bottom: 1px solid var(--dark-grey);
 }
 
 td div {
