@@ -6,6 +6,7 @@
     --dark-green: #1FC7B5;
     --light-green: #2ADECB;
     --lighter-green: #47E3D2;
+    --lightest-green: #DEE2E6;
 
     --darker-grey: #000000;
     --dark-grey: #1D1B20;
@@ -22,6 +23,10 @@
 
 h2, h3 {
     margin-top: 1em;
+}
+
+h4{
+    font-size: 1.5em;
 }
 
 i{
@@ -43,6 +48,10 @@ footer{
     background-color: var(--darker-grey);
 }
 
+.inner-divs-auto div{
+    height: auto;
+}
+
 .app-container{
     height: 90%;
 }
@@ -61,6 +70,10 @@ footer{
 
 .green-dark-background {
     background-color: var(--dark-green);
+}
+
+.green-lightest-background {
+    background-color: var(--lightest-green);
 }
 
 .margin-middle {
@@ -84,7 +97,10 @@ table tr td:nth-child(1){
     text-align: center;
 }
 
-table.green-dark-background tr td:nth-child(1), table.green-dark-background tr td:nth-child(2){
+table.green-dark-background tr td:nth-child(1),
+table.green-dark-background tr td:nth-child(2),
+table.dark-grey-background tr td:nth-child(1),
+table.dark-grey-background tr td:nth-child(2){
     border-collapse: collapse;
     border-bottom: 1px solid var(--white-color)
 }
@@ -93,8 +109,16 @@ table.green-dark-background tr td:nth-child(3){
     background-color: var(--dark-grey);    
 }
 
+table.dark-grey-background tr td:nth-child(3){
+    background-color: var(--darker-green);
+}
+
 table.green-dark-background tr:last-child{
     border-bottom: 1px solid var(--dark-grey);
+}
+
+table.dark-grey-background tr:last-child{
+    border-bottom: 1px solid var(--darker-green);
 }
 
 td div {
