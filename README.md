@@ -10,7 +10,7 @@ Se entregan 4 pantallas:
 
  
 Ambiente:
-- Angular CLI: 14.2.8 
-- Node: 18.18.0 (Unsupported)
-- Package Manager: npm 9.8.1
-- OS: win32 x64
+1. Angular CLI: 14.2.8 
+2. Node: 18.18.0 (Unsupported)
+3. Package Manager: npm 9.8.1
+4. OS: win32 x64
