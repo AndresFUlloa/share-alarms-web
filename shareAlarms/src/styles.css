@@ -1,27 +1,184 @@
-.green-background {
-    background-color: #189B8D;
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+
+:root {
+    --darkest-green: #0A433D;
+    --darker-green: #189B8D;
+    --dark-green: #1FC7B5;
+    --light-green: #2ADECB;
+    --lighter-green: #47E3D2;
+    --lightest-green: #DEE2E6;
+
+    --darker-grey: #000000;
+    --dark-grey: #1D1B20;
+    --light-grey: #322F35;
+    --lighter-grey: #48464C;
+    --lightest-grey: #AEA9B1;
+
+    --almost-white: #F5EFF7;
+    --white-color: #FFFFFF;
+
+    --yellow-color: #FFC107;
 }
 
-.black-background {
-    background-color: black;
+@font-face {
+  font-family: 'Pacifico';
+  src: url('/assets/fonts/Pacifico-Regular.ttf') format('truetype');
+}
+
+
+h2, h3 {
+    margin-top: 1em;
+}
+
+h4{
+    font-size: 1.5em;
+}
+
+h3{
+  font-size: 1.1em;
+}
+
+i{
+    display: flex;
+    width: 1.5em;
+    height: 1.5em;
+}
+
+.pacifico-letter {
+  font-family: 'Pacifico', cursive !important;
+  font-size: 2em !important;
+}
+
+.pacifico-letter2 {
+  font-family: 'Pacifico', cursive !important;
+  font-size: 3em !important;
+}
+
+
+div, body, html{
+    height: 100%;
+}
+
+footer{
+    height: 10%;
+    background-color: var(--darker-grey);
+}
+
+.inner-divs-auto div{
+    height: auto;
+}
+
+.app-container{
+    height: 90%;
+}
+
+.green-darker-background {
+    background-color: var(--darker-green);
+}
+
+.green-darker-letter {
+    color: var(--darker-green);
+}
+
+.green-dark-letter {
+    color: var(--dark-green);
+}
+
+.green-dark-background {
+    background-color: var(--dark-green);
+}
+
+.green-lightest-background {
+    background-color: var(--lightest-green);
+}
+
+.margin-middle {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.text-middle {
+    text-align: center;
+}
+
+.dark-grey-background {
+    background-color: var(--dark-grey);
+}
+
+.light-grey-background {
+  background-color: var(--light-grey);
 }
 
 .white-letter {
-    color: white;
+    color: var(--white-color);
 }
 
 table tr td:nth-child(1){
-    text-align: right;
+    text-align: center;
 }
 
-table.green-background tr{
+table.green-dark-background tr td:nth-child(1),
+table.green-dark-background tr td:nth-child(2),
+table.dark-grey-background tr td:nth-child(1),
+table.dark-grey-background tr td:nth-child(2){
     border-collapse: collapse;
-    border-bottom: 1px solid white
+    border-bottom: 1px solid var(--white-color)
 }
 
-table.green-background tr td:nth-child(3){
-    background-color: black;
+table.green-dark-background tr td:nth-child(3){
+    background-color: var(--light-grey);
+}
+
+table.dark-grey-background tr td:nth-child(3){
+    background-color: var(--darker-green);
+}
+
+table.green-dark-background tr:last-child{
+    border-bottom: 1px solid var(--light-grey);
+}
+
+table.dark-grey-background tr:last-child{
+    border-bottom: 1px solid var(--darker-green);
+}
+
+td div {
+    display: inline-flex;
+}
+
+td div i {
+    margin-left: 0.5em;
+}
+
+.middle-square {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1em;
+    height: auto;
+
 }
 
 
+.middle-square div.row {
+    margin-top: 1em;
+}
+
+.middle-square div.col-5 {
+    color: var(--white-color);
+}
+
+.button-white {
+    background-color: white;
+    color: var(--darker-green);
+}
+
+.button-dark {
+    background-color: var(--dark-grey);
+    color: white;
+
+}
+
+.clock-background {
+  background-image: url("assets/images/fondo_alarmas-removebg-preview.png");
+}
 

@@ -1,0 +1,27 @@
+
+
+/* Clase para celdas de calendario */
+.calendar td {
+  padding: 15px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+/* Clase para filas de calendario */
+.calendar tr {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/* Clase para encabezados de días */
+.calendar th {
+  text-align: center; /* Centra horizontalmente el texto en los encabezados de días */
+}
+
+/* Clase para resaltar el día actual */
+.current-day {
+  background-color: #2ADECB; /* Color de fondo para resaltar */
+  color: black; /* Color de texto para resaltar */
+  border-radius: 50%; /* Borde redondeado para círculo */
+}
+

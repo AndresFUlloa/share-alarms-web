@@ -1,0 +1,34 @@
+#registrarse {
+  background-color: #2ADECB; /* Color de fondo para resaltar */
+  color: black; /* Color de texto para resaltar */
+
+}
+
+#login {
+  background-color:black ; /* Color de fondo para resaltar */
+  color: white; /* Color de texto para resaltar */
+}
+
+.div-login {
+margin-top: 10em;
+}
+
+.div-login input {
+  border:2px solid var(--lighter-grey);
+}
+
+.div-login button {
+  border-radius: 6%; /* Borde redondeado para círculo */
+  border:none;
+  font-size: 0.85em;
+  padding: 0.5em 3.3em;
+  font-weight: bold;
+  margin-left: 0.2em;
+
+}
+
+.div-login .col-5 {
+  font-weight: bold;
+  color:var(--dark-grey);
+}
+

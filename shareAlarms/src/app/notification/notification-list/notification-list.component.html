@@ -1,0 +1,47 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-6 green-lightest-background">
+      <h3 class="pacifico-letter" style="text-align: center;">Share Alarms</h3>
+      <div class="container-fluid inner-divs-auto">
+        <div class="row" style="text-align: center; height: auto;">
+          <img src="assets/images/avatar-alarms.png" alt="imagen avatar" class="avatar-alarms">
+        </div>
+        <div class="row" style="margin-top: 1em;">
+          <h4 style="text-align: center;">Ramiro Delgado</h4>
+        </div>
+        <div class="row">
+          <p style="text-align: center;">{{fechaHoy | date: 'MMM dd, yyyy'}}</p>
+        </div>
+        <div class="row">
+          <p style="text-align: center;">{{fechaHoy | date: 'HH:mm'}}</p>
+        </div>
+        <div class="row">
+          <p style="text-align: center;">10 Eventos configurados</p>
+        </div>
+      </div>
+
+
+    </div>
+    <div class="col-6 green-darker-background">
+        <app-navigation></app-navigation>
+        <div class="middle-square">
+          <h3 class="white-letter">Notificaciones</h3>
+          <div class="light-grey-background" style="padding-top: 1em; padding-bottom: 1em;">
+          <table class="light-grey-background white-letter margin-middle" style="width: 80%; border-bottom: none; margin-top: 1em;">
+            <tbody>
+              <tr *ngFor="let notification of notifications">
+                <td>{{notification.id}}</td>
+                <td>{{notification.description}}</td>
+                <td>
+                  <div>
+                    <i class="bi bi-trash" (click)="eliminarNotificacion(notification.id)"></i>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

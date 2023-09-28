@@ -1,0 +1,29 @@
+#div-days {
+    display: none;
+}
+
+.circle {
+    width: 2em;
+    height: 2em;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    font-weight: bold;
+}
+
+.circle.selected {
+    background-color: var(--yellow-color);
+    color: var(--dark-grey);
+}
+
+.circle.unselected {
+    background-color: var(--dark-grey);
+    color: var(--light-green);
+}
+
+.error-alert {
+    font-size: 0.75em;
+}
