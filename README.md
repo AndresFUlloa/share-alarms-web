@@ -14,3 +14,11 @@ Ambiente:
 2. Node: 18.18.0 (Unsupported)
 3. Package Manager: npm 9.8.1
 4. OS: win32 x64
+
+Para ejecutar la aplicacion hay que:
+1. clonar el repo
+2. cambiar al directorio sharealarms: cd sharealarms
+3. correr node.js
+4. instalar las dependencias: npm install
+5. correr la aplicacion: ng serve -o
+6. *******importante: en el login debe ingresar valores en los campos para poder avanzar ********
