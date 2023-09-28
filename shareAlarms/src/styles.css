@@ -29,6 +29,10 @@ h4{
     font-size: 1.5em;
 }
 
+h3{
+  font-size: 1.1em;
+}
+
 i{
     display: flex;
     width: 1.5em;
@@ -89,6 +93,10 @@ footer{
     background-color: var(--dark-grey);
 }
 
+.light-grey-background {
+  background-color: var(--light-grey);
+}
+
 .white-letter {
     color: var(--white-color);
 }
@@ -106,7 +114,7 @@ table.dark-grey-background tr td:nth-child(2){
 }
 
 table.green-dark-background tr td:nth-child(3){
-    background-color: var(--dark-grey);    
+    background-color: var(--light-grey);
 }
 
 table.dark-grey-background tr td:nth-child(3){
@@ -114,7 +122,7 @@ table.dark-grey-background tr td:nth-child(3){
 }
 
 table.green-dark-background tr:last-child{
-    border-bottom: 1px solid var(--dark-grey);
+    border-bottom: 1px solid var(--light-grey);
 }
 
 table.dark-grey-background tr:last-child{
@@ -130,14 +138,14 @@ td div i {
 }
 
 .middle-square {
-    width: 75%;
+    width: 60%;
     margin-left: auto;
     margin-right: auto;
     margin-top: 1em;
     height: auto;
-    padding-top: 1em;
-    padding-bottom: 1em;
+
 }
+
 
 .middle-square div.row {
     margin-top: 1em;
@@ -155,5 +163,10 @@ td div i {
 .button-dark {
     background-color: var(--dark-grey);
     color: white;
+
+}
+
+.clock-background {
+  background-image: url("assets/images/fondo_alarmas-removebg-preview.png");
 }
 

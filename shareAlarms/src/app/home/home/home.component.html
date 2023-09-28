@@ -1,0 +1,88 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-6 green-darker-background">
+      <h2 class="pacifico-letter" style="text-align: center;">Share Alarms</h2>
+
+      <div class="container-fluid inner-divs-auto">
+        <div class="row">
+          <div class="middle-square">
+            <h3>Programacion de eventos mensuales</h3>
+            <div class="light-grey-background" style="padding-top: 1em; padding-bottom: 1em;">
+              <table class="calendar white-letter margin-middle">
+                <thead>
+                  <tr>
+                    <th colspan="7">{{ currentMonth }}, {{ currentYear }}</th>
+                  </tr>
+                  <tr>
+                    <th>D</th>
+                    <th>L</th>
+                    <th>M</th>
+                    <th>M</th>
+                    <th>J</th>
+                    <th>V</th>
+                    <th>S</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let week of calendar">
+                    <ng-container *ngFor="let day of week">
+                      <td [ngClass]="{'current-day': day === currentDay}">{{ day }}</td>
+                    </ng-container>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="col-6 light-grey-background">
+      <app-navigation></app-navigation>
+
+      <div class="middle-square">
+        <h3 class="white-letter">Listado</h3>
+        <div class="green-darker-background" style="padding-top: 1em; padding-bottom: 1em;">
+          <div class="row">
+            <div class="col-1"></div>
+            <div class="col-8">
+              <h3 class="white-letter">Eventos</h3>
+            </div>
+            <div class="col-3">
+              <h3 class="white-letter">{{fechaHoy | date: 'dd MMM'}}</h3>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-1"></div>
+            <div class="col-10" style="border-bottom: 1px solid white;"></div>
+          </div>
+          <div class="row">
+            <div class="col-1"></div>
+            <div class="col-10">
+              <table class="light-grey-background text-white" style="width: 100%; border-bottom: none;">
+                <tbody>
+                  <tr *ngFor="let event of events">
+                    <td>{{event.id}}</td>
+                    <td>{{event.description}}</td>
+                    <td>
+                      <div>
+                        <i class="bi bi-pencil green-dark-letter" [routerLink]="['/crearEvento']"></i>
+                        <i class="bi bi-trash green-dark-letter" (click)="eliminarEvento(event.id)"></i>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12" style="text-align: right;">
+              <button class="button-dark" style="margin-right: 2em;" type="submit" [routerLink]="['/crearEvento']">Nuevo</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

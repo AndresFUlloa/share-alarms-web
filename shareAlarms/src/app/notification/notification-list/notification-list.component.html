@@ -19,14 +19,15 @@
           <p style="text-align: center;">10 Eventos configurados</p>
         </div>
       </div>
-      
-      
+
+
     </div>
     <div class="col-6 green-darker-background">
         <app-navigation></app-navigation>
         <div class="middle-square">
           <h3 class="white-letter">Notificaciones</h3>
-          <table class="dark-grey-background white-letter margin-middle" style="width: 80%; border-bottom: none; margin-top: 1em;">
+          <div class="light-grey-background" style="padding-top: 1em; padding-bottom: 1em;">
+          <table class="light-grey-background white-letter margin-middle" style="width: 80%; border-bottom: none; margin-top: 1em;">
             <tbody>
               <tr *ngFor="let notification of notifications">
                 <td>{{notification.id}}</td>
@@ -40,6 +41,7 @@
             </tbody>
           </table>
         </div>
+      </div>
     </div>
   </div>
 </div>

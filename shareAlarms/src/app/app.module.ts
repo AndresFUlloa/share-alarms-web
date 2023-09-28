@@ -7,6 +7,7 @@ import { EventModule } from './event/event.module';
 import { NavigationModule } from './navigation/navigation.module';
 import { RouterModule } from '@angular/router';
 import { NotificationModule } from './notification/notification.module';
+import { HomeModule } from './home/home.module';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { NotificationModule } from './notification/notification.module';
     BrowserModule,
     AppRoutingModule,
     EventModule,
+    HomeModule,
     NavigationModule,
     RouterModule,
     NotificationModule

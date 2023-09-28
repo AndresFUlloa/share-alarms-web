@@ -1,0 +1,51 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-6 green-darker-background">
+      <h3 class="pacifico-letter" style="text-align: center;">Share Alarms</h3>
+      <form [formGroup]="loginForm" (ngSubmit)="!loginForm.invalid && login()">
+        <div class="container-fluid inner-divs-auto div-login">
+          <div class="row">
+            <div class="col-5">Usuario:</div>
+            <div class="col-7">
+              <input type="text" formControlName="usuario" placeholder="Ingrese su usuario" id="usuario"
+                class="form-control rounded" />
+              <div class="error-alert"
+                *ngIf="loginForm.get('usuario')!.hasError('required') && loginForm.get('usuario')!.touched">
+                El campo es obligatorio
+              </div>
+            </div>
+          </div>
+          <div class="row mt-3"></div>
+          <div class="row mt-3">
+            <div class="col-5">Contraseña:</div>
+            <div class="col-7">
+              <input type="password" formControlName="contrasena" placeholder="Ingrese contraseña" id="contrasena"
+                class="form-control rounded" />
+              <div class="error-alert"
+                *ngIf="loginForm.get('contrasena')!.hasError('required') && loginForm.get('contrasena')!.touched">
+                El campo es obligatorio
+              </div>
+            </div>
+          </div>
+          <div class="row mt-3"></div>
+          <div class="row mt-3">
+            <div class="col-12 d-flex justify-content-end">
+              <button class="mx-2" id="registrarse" type="button" (click)="registrarse()">Registrarse</button>
+              <button class="mx-2" id="login" type="submit">Ingresar</button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+
+
+    <div class="col-6 green-darker-background clock-background">
+      <div class="middle-square" style="margin-top: 8em;">
+        <h2 class="white-letter">Login</h2>
+        <p class="white-letter" style="font-size: 1.2em;">"Bienvenido a tu aplicacion para Compartir Alarmas, desde esta
+          pagina podras tener una vision general de todos tus eventos y asi gestionar tus usuarios que tendran acceso a
+          la aplicacion movil y tambien a esta version Web."</p>
+      </div>
+    </div>
+  </div>
+</div>
